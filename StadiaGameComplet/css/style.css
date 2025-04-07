@@ -1,0 +1,335 @@
+/* Styles personnalisés pour StadiaGame */
+
+/* Variables */
+:root {
+    --primary: #5c6bc0;
+    --primary-dark: #26418f;
+    --primary-light: #8e99f3;
+    --secondary: #ff5722;
+    --dark: #212121;
+    --light: #f5f5f5;
+    --gray: #757575;
+    --success: #4caf50;
+    --warning: #ffc107;
+    --danger: #f44336;
+    --info: #2196f3;
+}
+
+/* Styles généraux */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark);
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Carousel */
+.carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card .card-img-top {
+    height: 150px;
+}
+
+/* Features */
+.feature-box {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Footer */
+footer {
+    margin-top: 50px;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-light) !important;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0.75rem 0;
+}
+
+/* Game details */
+.rating {
+    color: var(--warning);
+}
+
+/* Cart */
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 40vh;
+    }
+    
+    .carousel-caption {
+        padding: 10px;
+    }
+    
+    .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Custom styles for auth pages */
+.auth-container {
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+/* Profile page */
+.profile-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+/* Custom animations */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Custom styling for game cards */
+.game-card-price {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.badge-stock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+/* Product page styles */
+.product-image {
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.price-display {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.stock-status {
+    font-weight: bold;
+}
+
+.stock-status.in-stock {
+    color: var(--success);
+}
+
+.stock-status.low-stock {
+    color: var(--warning);
+}
+
+.stock-status.out-of-stock {
+    color: var(--danger);
+}
+
+/* Custom tab styles */
+.nav-tabs .nav-link {
+    color: var(--gray);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Checkout page styles */
+.order-summary {
+    position: sticky;
+    top: 20px;
+}
+
+/* Custom alert styles */
+.alert {
+    border-radius: 5px;
+    border-left-width: 5px;
+}
+
+.alert-success {
+    border-left-color: var(--success);
+}
+
+.alert-danger {
+    border-left-color: var(--danger);
+}
+
+.alert-warning {
+    border-left-color: var(--warning);
+}
+
+.alert-info {
+    border-left-color: var(--info);
+}
+
+/* Form styles */
+.form-control:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 0.25rem rgba(92, 107, 192, 0.25);
+}
+
+/* Custom badge styles */
+.badge.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+/* Category pills */
+.category-pill {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50rem;
+    color: #fff;
+    background-color: var(--primary);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.category-pill:hover {
+    background-color: var(--primary-dark);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Search results highlighting */
+.search-highlight {
+    background-color: rgba(255, 193, 7, 0.3);
+    padding: 2px;
+    border-radius: 2px;
+}
+
+/* Pagination styles */
+.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.pagination .page-link {
+    color: var(--primary);
+}
+
+.pagination .page-link:hover {
+    background-color: var(--light);
+    color: var(--primary-dark);
+}
+
+/* Loading spinner */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner-border.text-primary {
+    color: var(--primary) !important;
+}
+
+/* Custom toast notifications */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Game grid layout */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
